@@ -7,7 +7,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: akkc-deployment
-  minReplicas: 10
+  minReplicas: 8
   maxReplicas: 20
   metrics:
     - type: Resource
@@ -16,6 +16,7 @@ spec:
         target:
           type: Utilization
           averageUtilization: 50   # if >50% CPU, scale up
+
 
 
 
