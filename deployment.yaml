@@ -5,7 +5,7 @@ metadata:
   labels:
     app: akkc-portfolio-deployment
 spec:
-  replicas: 8
+  replicas: 4
   selector:
     matchLabels:
       app: akkc-portfolio
@@ -29,5 +29,31 @@ spec:
 
 
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akkc-deployment-001
+  labels:
+    app: akkc-portfolio-deployment-001
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: akkc-portfolio-001
+  template:
+    metadata:
+      labels:
+        app: akkc-portfolio-001
+    spec:     
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+          - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "200m"
 
 
