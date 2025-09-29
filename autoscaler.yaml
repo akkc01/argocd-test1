@@ -6,7 +6,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: dewa-deployment
+    name: akkc-deployment
   minReplicas: 5
   maxReplicas: 10
   metrics:
@@ -16,4 +16,5 @@ spec:
         target:
           type: Utilization
           averageUtilization: 50   # if >50% CPU, scale up
+
 
