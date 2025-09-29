@@ -13,20 +13,18 @@ spec:
     metadata:
       labels:
         app: akkc-portfolio
-    spec:                            # 👈 Correct place for this spec
+    spec:     
       containers:
       - name: nginx
         image: akkc01/akkc:v1
         ports:
           - containerPort: 80
-        # envFrom:
-        #   - configMapRef:
-        #       name: my-config       # Your config map with env vars
         resources:
           requests:
             cpu: "100m"
           limits:
             cpu: "200m"
+
 
 
 
