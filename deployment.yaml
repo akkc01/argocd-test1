@@ -5,7 +5,7 @@ metadata:
   labels:
     app: akkc-portfolio-deployment
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: akkc-portfolio
@@ -24,6 +24,7 @@ spec:
             cpu: "100m"
           limits:
             cpu: "200m"
+
 
 
 
